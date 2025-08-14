@@ -1,24 +1,288 @@
-<!-- 
-HTML Template for Missions, delete and replace with mission HTML
--->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Gnius Club</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playbook — 2º Preparatoria — Misión M14: La Arquitectura del Razonamiento: ReAct</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-  <h1>
-    Playbook HTML Placeholder Template
-  </h1>
-  <p>
-    Replace with actual playbook code.
-  </p>
+  <header>
+    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M14: La Arquitectura del Razonamiento: ReAct</strong></h1>
+    <div class="header-widgets">
+      <div class="timer-container">
+        <span id="timer">⏱️ 00:00</span>
+        <button id="startStop">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle-input">
+          <span class="slider round"></span>
+        </label>
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </header>
+  <div class="main-container">
+    <aside class="activity-list">
+      <h2>Actividades</h2>
+      <ul>
+        <li><a href="#activity-0">📝</a></li>
+        <li><a href="#activity-1">1</a></li>
+        <li><a href="#activity-2">2</a></li>
+        <li><a href="#activity-3">3</a></li>
+        <li><a href="#activity-4">4</a></li>
+        <li><a href="#activity-5">5</a></li>
+      </ul>
+      <div class="sidebar-info">
+        <p>💡 Cada actividad está diseñada para involucrar al equipo.</p>
+        <p>⏱️ Los tiempos son una guía para optimizar la sesión.</p>
+      </div>
+    </aside>
+    <main class="content">
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
+
+      <!-- 0) De un Vistazo -->
+      <section class="activity-card" id="activity-0">
+        <h2 class="activity-title">📝 De un Vistazo: Misión M14: La Arquitectura del Razonamiento: ReAct</h2>
+        <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
+        <div class="overview">
+          <section class="overview-block">
+            <h3>Objetivos e “I Can”</h3>
+            <ul>
+              <li>Comprender y aplicar el patrón de razonamiento ReAct (Reason + Act) para diseñar el comportamiento de agentes de IA.</li>
+              <li>Descomponer tareas complejas en ciclos de Observación, Pensamiento y Acción, seleccionando herramientas adecuadas en cada etapa.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Secuencia y tiempos</h3>
+            <ol>
+              <li>Saludo Interactivo con IA — 3 min</li>
+              <li>“I Can” + Desafío — 5–7 min</li>
+              <li>AI GYM — 10–12 min</li>
+              <li>Brain Spark — 17–20 min</li>
+              <li>GNIUS STORM — 5 min</li>
+            </ol>
+          </section>
+          <section class="overview-block">
+            <h3>Entregable del Micro-Proyecto</h3>
+            <ul>
+              <li>Pseudocódigo detallado para al menos 3 ciclos del bucle ReAct, especificando el pensamiento del agente y la acción (herramienta) a usar para una tarea compleja.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Criterios de calidad</h3>
+            <ul>
+              <li>Correcta aplicación del bucle Observación → Pensamiento → Acción en cada ciclo.</li>
+              <li>Claridad y coherencia en la especificación del pensamiento del agente.</li>
+              <li>Adecuada selección y justificación de la herramienta a usar en cada acción.</li>
+              <li>Capacidad para descomponer una tarea compleja en pasos lógicos.</li>
+            </ul>
+          </section>
+          <section class="overview-block">
+            <h3>Materiales y preparación</h3>
+            <ul>
+              <li>Proyector e internet</li>
+              <li>LLM (Xolo)</li>
+              <li>IDE/CLI/Notebook (para pseudocódigo, ej. editor de texto simple)</li>
+              <li>Ejemplo mínimo de un ciclo ReAct listo para demostración.</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <!-- 1) Saludo Interactivo con IA -->
+      <section class="activity-card" id="activity-1">
+        <h2 class="activity-title">Saludo Interactivo con IA</h2>
+        <p class="activity-purpose">Establecer el foco en el diseño de agentes de IA y activar a Xolo con el perfil e intereses del estudiante.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
+              <p class="step-instructions">Proyectar Diapositiva 2. Presenta el tema de la misión y su valor profesional en el diseño de agentes de IA.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Equipo: hoy profundizaremos en la arquitectura del razonamiento de los agentes de IA. Aprenderemos a diseñar cómo una IA piensa y actúa para resolver problemas complejos, un concepto clave para construir agentes autónomos y eficientes.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
+              <p class="step-instructions">Cada alumno saluda a Xolo con su perfil + intereses + misión/tema; Xolo devuelve breve guía de enfoque. Modelo: “Hola Xolo, soy [Nombre], perfil [X], me interesa [Y]. Hoy: Misión M14: La Arquitectura del Razonamiento: ReAct. Necesito foco en el patrón ReAct y la descomposición de tareas.”</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas para enfocar su trabajo en el patrón ReAct.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 2) “I Can” + Desafío -->
+      <section class="activity-card" id="activity-2">
+        <h2 class="activity-title">“I Can Statement” + Desafío</h2>
+        <p class="activity-purpose">Traducir la misión en metas operativas y presentar el reto del micro-proyecto.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Presenta el reto</h3>
+              <p class="step-instructions">Proyectar Diapositiva 3. Define qué se logrará hoy y el criterio de éxito, derivado de la Misión y Currícula.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El reto de hoy es convertirse en arquitectos de agentes autónomos. Diseñarán la lógica de razonamiento de un agente de IA para una tarea compleja, aplicando el patrón ReAct. El éxito se medirá por la claridad y la lógica de su pseudocódigo.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Afirmaciones “I Can”</h3>
+              <p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1-2 “I Can” concretos y medibles alineados al entregable.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Formulen su “Puedo…” en 1-2 frases: acción + criterio + resultado. Por ejemplo: “Puedo diseñar la secuencia de pensamiento y acción de un agente de IA usando el patrón ReAct para resolver una tarea compleja y justificar la selección de herramientas en cada paso.”</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3) AI GYM -->
+      <section class="activity-card" id="activity-3">
+        <h2 class="activity-title">AI GYM</h2>
+        <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión: el patrón ReAct.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Marco del día</h3>
+              <p class="step-instructions">Proyectar Diapositiva 5. Introduce el patrón ReAct (Reason + Act): bucle de Observación → Pensamiento (Reason) → Acción (Act) que se repite hasta completar la tarea; explica cómo decidir qué herramienta usar en cada ciclo. Define 2-3 errores comunes y cómo evitarlos.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">El patrón ReAct es fundamental para agentes de IA autónomos. Permite que el agente razone sobre su estado actual (Observación), decida qué hacer (Pensamiento) y ejecute una acción (Acción), repitiendo el ciclo. Errores comunes incluyen no desglosar el pensamiento, elegir herramientas incorrectas o no verificar la Observación. La clave es la claridad en cada paso.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Mini-demostración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 6. Construye un ejemplo mínimo de un ciclo ReAct (ej. para "buscar información sobre un tema"), mostrando la Observación inicial, el Pensamiento, la Acción (uso de una herramienta simulada) y la nueva Observación.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Observen cómo el agente evalúa la Observación, formula un Pensamiento claro y ejecuta una Acción específica utilizando una herramienta. Verifiquen si el Pensamiento es lógico y si la Acción es la más eficiente para el objetivo.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Check rápido</h3>
+              <p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves sobre el patrón ReAct.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Pregunta 1: ¿Cuál es la secuencia correcta del bucle ReAct? Pregunta 2: ¿Por qué es importante especificar la herramienta en la fase de Acción?</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4) Brain Spark -->
+      <section class="activity-card" id="activity-4">
+        <h2 class="activity-title">Brain Spark</h2>
+        <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto: pseudocódigo ReAct.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Producción</h3>
+              <p class="step-instructions">Proyectar Diapositiva 8. Indica la tarea a producir: pseudocódigo detallado para al menos 3 ciclos del bucle ReAct para una tarea compleja (ej. planificar vacaciones), especificando el pensamiento del agente y la acción (herramienta) a usar en cada paso. Tiempo de trabajo autónomo.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">N/A</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Iteración</h3>
+              <p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta: añadir un paso de Self-Critique o un ciclo adicional para manejar una excepción o una nueva condición.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Antes de cerrar: valida que tu pseudocódigo sea claro y que cada paso del ciclo ReAct esté bien definido. Considera añadir un paso de auto-crítica o un ciclo para una condición inesperada.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 3 — Evidencia</h3>
+              <p class="step-instructions">Proyectar Diapositiva 10. Solicita la entrega del pseudocódigo ReAct documentado (texto o captura de pantalla).</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Entrega tu pseudocódigo con el formato: [Misión]_[Nombre]_[Tarea Elegida]. Asegúrate de que sea legible y demuestre la aplicación del patrón ReAct.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5) GNIUS STORM -->
+      <section class="activity-card" id="activity-5">
+        <h2 class="activity-title">GNIUS STORM</h2>
+        <p class="activity-purpose">Exhibición breve y cierre ejecutivo de la misión.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
+              <p class="step-instructions">2–3 personas/equipos muestran evidencia de valor (30–45 s c/u) de su pseudocódigo ReAct.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Enfoca tu presentación en cómo el patrón ReAct te ayudó a desglosar la tarea compleja y la lógica detrás de tus decisiones de pensamiento y acción.</p>
+              </div>
+            </div>
+          </article>
+          <article class="step-card">
+            <div class="step-content">
+              <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
+              <p class="step-instructions">Proyectar Diapositiva 11. Síntesis: 1 aprendizaje clave del marco, 1 criterio que más impactó el resultado, 1 siguiente paso aplicable fuera del aula.</p>
+            </div>
+            <div class="collapsible">
+              <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+              <div class="collapsible-content">
+                <p class="dialogue assistant">Síntesis: El patrón ReAct es esencial para diseñar agentes de IA robustos. Criterio clave: La claridad en el pensamiento del agente impacta directamente la eficiencia. Siguiente paso aplicado: Utilizar este patrón para analizar cómo otros sistemas complejos (no solo IA) toman decisiones paso a paso.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>
